@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<title>glitch maze</title>
+<style>
+  #c {
+    position: absolute;
+    top: calc(50% - 256px);
+    left: calc(50% - 256px);
+    background-color: #222;
+    box-shadow: 0 0 5px #333;
+  }
+  body {
+    background-color: #111;
+  }
+  @media all and (max-width:512px) {
+    #c {
+      width: 100vw;
+      height: 100vw;
+      top: calc(50% - 50vw);
+      left: 0;
+    }
+  }
+  @media all and (max-height:512px) {
+    #c {
+      width: 100vh;
+      height: 100vh;
+      top: 0;
+      left: calc(50% - 50vh);
+    }
+  }
+  @media all and (max-width:100vh) and (max-height:512px) {
+    #c {
+      width: 100vw;
+      height: 100vw;
+      top: calc(50% - 50vw);
+      left: 0;
+    }
+  }
+  @media all and (max-width:512px) and (max-height:100vw) {
+    #c {
+      width: 100vh;
+      height: 100vh;
+      top: 0;
+      left: calc(50% - 50vh);
+    }
+  }
+</style>
+<canvas id=c></canvas>
+<script src="small-player.js"></script>
+<script src="song.js"></script>
+<script src="index.js"></script>
